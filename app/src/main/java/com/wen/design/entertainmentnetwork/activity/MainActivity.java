@@ -42,20 +42,18 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    public static final String[] sTitle = new String[]{"幼儿故事", "儿童故事", "睡前故事", "益智故事","寓言故事","民间故事"};
+    public static final String[] sTitle = new String[]{"幼儿故事", "儿童故事", "睡前故事", "益智故事", "寓言故事", "民间故事"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SharedPreferences themeSp=getSharedPreferences("theme",MODE_PRIVATE);
-        String themeName=themeSp.getString("theme","知乎蓝");
-        if(themeName.equals("知乎蓝")){
+        SharedPreferences themeSp = getSharedPreferences("theme", MODE_PRIVATE);
+        String themeName = themeSp.getString("theme", "知乎蓝");
+        if (themeName.equals("知乎蓝")) {
             setTheme(R.style.AppTheme);
-        }
-        else if(themeName.equals("水鸭绿")){
+        } else if (themeName.equals("水鸭绿")) {
             setTheme(R.style.AppTheme_Teal);
-        }
-        else if(themeName.equals("低调灰")){
+        } else if (themeName.equals("低调灰")) {
             setTheme(R.style.AppTheme_Pink);
         }
         setContentView(R.layout.activity_main);
@@ -65,8 +63,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         TextView mAboutText = (TextView) findViewById(R.id.aboutText);
-        AssetManager mgr=getAssets();//得到AssetManager
-        Typeface tf=Typeface.createFromAsset(mgr, "fonts/Tangerine-Bold.ttf");//根据路径得到Typeface
+        AssetManager mgr = getAssets();//得到AssetManager
+        Typeface tf = Typeface.createFromAsset(mgr, "fonts/Tangerine-Bold.ttf");//根据路径得到Typeface
         mAboutText.setTypeface(tf);//设置字体
         initView();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -118,7 +116,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-         if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_gallery) {
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {
@@ -127,7 +125,7 @@ public class MainActivity extends AppCompatActivity
             textIntent.putExtra(Intent.EXTRA_TEXT, "大家好，我在使用一款富含故事的应用软件。快来下载使用吧，一大堆有趣的故事还在等着你呢！！");
             startActivity(Intent.createChooser(textIntent, "分享"));
         } else if (id == R.id.nav_send) {
-            AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("关于");
             builder.setMessage("故事汇目前由文文独立设计/开发/运营完成的。\n\n故事汇的开发诞生于2018/3/16日，因为我经常趴在电脑上，频感疲惫。\n\n" +
                     "偶然间看到一个故事网站，发现这个网站的故事挺有趣的，偶尔看看小故事也可以放松一下。\n\n" +
