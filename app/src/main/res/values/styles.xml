@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary_Blue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_Blue</item>
+        <item name="colorAccent">@color/colorAccent_Blue</item>
+        <item name="android:navigationBarColor">@color/colorAccent_Blue</item>
+    </style>
+
+    <style name="AppTheme_Teal" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary_Teal</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_Teal</item>
+        <item name="colorAccent">@color/colorAccent_Teal</item>
+        <item name="android:navigationBarColor">@color/colorAccent_Teal</item>
+    </style>
+
+    <style name="AppTheme_Pink" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary_Pink</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_Pink</item>
+        <item name="colorAccent">@color/colorAccent_Pink</item>
+        <item name="android:navigationBarColor">@color/colorAccent_Pink</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    <style name="AppTheme_Teal.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    <style name="AppTheme_Pink.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme_Teal.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme_Gray.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme_Gray.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme_Teal.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>

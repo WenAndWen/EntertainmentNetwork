@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="基础设置">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="example_switch"
+            android:summary="@string/loading_image_summary"
+            android:title="@string/loading_image_title" />
+        <PreferenceScreen android:summary="@string/project_address_message"
+            android:title="@string/project_address_title">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/WenAndWen/DownMusic-Ksong" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="人性化自由选择">
+        <ListPreference
+            android:defaultValue="-1"
+            android:entries="@array/change_theme_items"
+            android:entryValues="@array/change_theme_list_values"
+            android:key="theme_type_number"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/change_theme_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
